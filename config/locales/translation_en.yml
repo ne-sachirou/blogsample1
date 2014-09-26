@@ -1,0 +1,9 @@
+en:
+  activerecord:
+    models:
+      item: item  #g
+
+    attributes:
+      item:
+        content: content  #g
+        title: title  #g

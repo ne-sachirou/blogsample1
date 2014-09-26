@@ -38,7 +38,16 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-group :development, :test do
+group :development do
+  gem 'i18n_generators'
+end
+
+group :test do
   gem 'rspec'
   gem 'rspec-rails', '~> 3.0.0'
+  gem 'shoulda-matchers'
+  gem 'database_cleaner'
+  gem 'factory_girl_rails'
+  gem 'faker'
+  gem 'faker-japanese'
 end

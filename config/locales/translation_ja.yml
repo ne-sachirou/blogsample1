@@ -1,0 +1,13 @@
+ja:
+  activerecord:
+    errors:
+      messages:
+        blank: "が記入されていません。"
+        invalid: "が不正な値です。"
+        confirmation: "が一致しません。"
+    models:
+      item: 記事
+    attributes:
+      item:
+        content: 本文
+        title: 題名
