@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :item_categories
+
   devise_for :users, skip: [:registrations]
   root 'items#index'
   resources :items

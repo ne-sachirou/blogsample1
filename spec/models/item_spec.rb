@@ -11,15 +11,15 @@ RSpec.describe Item, :type => :model do
 
   describe 'validation' do
     it 'titleは必須です' do
-      topic = FactoryGirl.build :item, title: ''
-      expect(topic.valid?).to be_falsey
-      expect(topic.save).to be_falsey
+      item = FactoryGirl.build :item, title: ''
+      expect(item.valid?).to be_falsey
+      expect(item.save).to be_falsey
     end
 
     it 'contentは必須です' do
-      topic = FactoryGirl.build :item, content: ''
-      expect(topic.valid?).to be_falsey
-      expect(topic.save).to be_falsey
+      item = FactoryGirl.build :item, content: ''
+      expect(item.valid?).to be_falsey
+      expect(item.save).to be_falsey
     end
   end
 end
