@@ -1,0 +1,26 @@
+{
+  "name": "blogsample1",
+  "version": "0.0.0",
+  "homepage": "https://github.com/ne-sachirou/blogsample1",
+  "authors": [
+    "ne_Sachirou <utakata.c4se@gmail.com>"
+  ],
+  "description": "Blog sample 1 by Rails4.",
+  "moduleType": [
+    "es6",
+    "globals"
+  ],
+  "license": "CC 0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/assets/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "pure": "~0.5.0",
+    "normalize-css": "~3.0.1"
+  }
+}
