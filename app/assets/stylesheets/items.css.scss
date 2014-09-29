@@ -1,3 +1,35 @@
-// Place all the styles related to the items controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.items {
+  .item { }
+}
+
+.item {
+  margin: 1em 0;
+
+  h1 {
+    font-size: 1.5;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+
+  aside { font-size: smaller; }
+}
+
+.pagination {
+  font-size: 1.5em;
+  text-align: center;
+
+  a, .current {
+    padding: 0.42em;
+  }
+  a {
+    background: #cc3333;
+    box-shadow: 1px 1px 1px #aaaaaa;
+    color: #c0ffee !important;
+    text-decoration: none;
+
+    &:hover { color: inherit !important; }
+  }
+}

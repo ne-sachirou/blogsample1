@@ -1,32 +1,19 @@
-<h1>Blog sample 1 by Rails4.</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Content</th>
-      <th>Created At</th>
-      <th colspan="2"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @items.each do |item| %>
-      <tr>
-        <td><%= link_to item.title, item %></td>
-        <td><%= item.content[0..140] %>...</td>
-        <td><%= item.created_at.strftime '%Y-%b-%d (%a)' %></td>
-      <% if user_signed_in? %>
-        <td><%= link_to 'Edit', edit_item_path(item) %></td>
-        <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      <% end %>
-      </tr>
+<% if user_signed_in? %>
+<nav><%= link_to 'New Item', new_item_path %></nav>
+<% end %>
+<div class="items">
+<% @items.each do |item| %>
+  <section class="item">
+    <h1><%= link_to item.title, item %></h1>
+    <div><%= item.content[0..140] %>...</div>
+    <aside>
+      <%= item.created_at.strftime '%Y-%b-%d (%a)' %>
+    <% if user_signed_in? %>
+      <%= link_to 'Edit', edit_item_path(item) %>
+      <%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %>
     <% end %>
-  </tbody>
-</table>
-
+    </aside>
+  </section>
+<% end %>
+</div>
 <%= paginate @items %>
-
-<br>
-
-<%= link_to 'New Item', new_item_path %>

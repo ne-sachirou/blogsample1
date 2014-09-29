@@ -15,3 +15,30 @@
  */
 @import '../bower_components/normalize-css/normalize';
 @import '../bower_components/pure/pure';
+
+a:hover {
+  background: transparent;
+  color: inherit;
+  transition: 0.3s;
+}
+
+#header {
+  background: #cccccc;
+  padding-bottom: 1px;
+
+  nav {
+    font-size: smaller;
+    text-align: right;
+  }
+
+  h1 {
+    background: #cc3333;
+    box-shadow: 0 1px 1px #aaaaaa;
+    color: #c0ffee;
+    margin: 0;
+    padding: 0.67em;
+    text-align: center;
+  }
+}
+
+#content { }

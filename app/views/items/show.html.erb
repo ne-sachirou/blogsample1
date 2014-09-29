@@ -1,14 +1,13 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @item.title %>
-</p>
-
-<p>
-  <strong>Content:</strong>
+<article class="item">
+  <h1><%= @item.title %></h1>
   <%= @item.content %>
-</p>
-
-<%= link_to 'Edit', edit_item_path(@item) %> |
-<%= link_to 'Back', items_path %>
+  <aside>
+    <%= @item.created_at.strftime '%Y-%b-%d (%a)' %>
+  <% if user_signed_in? %>
+    <%= link_to 'Edit', edit_item_path(@item) %>
+    <%= link_to 'Destroy', @item, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% end %>
+  </aside>
+</article>
+<p id="notice"><%= notice %></p>
+<nav><%= link_to 'Back', items_path %></nav>
