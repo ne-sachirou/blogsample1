@@ -11,3 +11,5 @@ ja:
       item:
         content: 本文
         title: 題名
+      item_category:
+        name: カテゴリー名

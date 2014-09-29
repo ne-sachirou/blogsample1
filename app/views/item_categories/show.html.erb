@@ -4,6 +4,13 @@
   <strong>Name:</strong>
   <%= @item_category.name %>
 </p>
+<ul>
+  <% @item_category.items.each do |item| %>
+    <li><%= link_to item.title, item_path(item) %></li>
+  <% end %>
+</ul>
 
-<%= link_to 'Edit', edit_item_category_path(@item_category) %> |
-<%= link_to 'Back', item_categories_path %>
+<% if user_signed_in? %>
+  <%= link_to 'Edit', edit_item_category_path(@item_category) %> |
+  <%= link_to 'Back', item_categories_path %>
+<% end %>

@@ -4,6 +4,7 @@ RSpec.describe ItemCategory, :type => :model do
   describe 'migrate' do
     it { should have_db_column(:id).of_type(:integer) }
     it { should have_db_column(:name).of_type(:string).with_options(null:false) }
+    it { should have_many(:items) }
   end
 
   describe 'validation' do
