@@ -1,3 +1,5 @@
+require 'item_content_render'
+
 class ItemsController < ApplicationController
   before_action :set_item, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:new, :edit, :create, :update, :destroy]
@@ -11,6 +13,11 @@ class ItemsController < ApplicationController
   # GET /items/1
   # GET /items/1.json
   def show
+    markdown = Redcarpet::Markdown.new ItemContentRender,
+      autolink: true,
+      tables: true,
+      fenced_code_blocks: true
+    @item_content = markdown.render @item.content
   end
 
   # GET /items/new

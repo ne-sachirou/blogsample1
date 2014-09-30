@@ -1,6 +1,6 @@
 <article class="item">
   <h1><%= @item.title %></h1>
-  <%= @item.content %>
+  <%== @item_content %>
   <aside>
     <%= link_to(@item.item_category.name, @item.item_category) if @item.item_category %>
     <%= @item.created_at.strftime '%Y-%b-%d (%a)' %>

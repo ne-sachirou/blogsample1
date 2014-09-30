@@ -24,5 +24,7 @@ module Blogsample1
       g.test_framework :rspec
       g.factory_girl dir: 'spec/factories'
     end
+
+    config.eager_load_paths += ["#{Rails.root}/lib"]
   end
 end

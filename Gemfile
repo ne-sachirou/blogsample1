@@ -37,6 +37,8 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 gem 'devise'
 gem 'kaminari'
+gem 'redcarpet' # Markdown
+gem 'pygments.rb' # Syntax hilighter (Using for Markdown). Needs Python2.
 
 group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
