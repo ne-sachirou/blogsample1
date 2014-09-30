@@ -3,7 +3,7 @@ Blog sample 1 by Rails4.
 Authors:: ne_Sachirou <utakata.c4se@gmail.com>
 License:: Public Domain or CC-0.
 
-{screen shot}[public/screenshot.png]
+{screen shot}[https://raw.githubusercontent.com/ne-sachirou/blogsample1/master/public/screenshot.png]
 
 == Ruby version
 MRI 2.1.3
