@@ -13,3 +13,10 @@ ja:
         title: 題名
       item_category:
         name: カテゴリー名
+  views:
+    pagination:
+      first: "&laquo;"
+      last: "&raquo;"
+      previous: "&lsaquo;"
+      next: "&rsaquo;"
+      truncate: "&hellip;"

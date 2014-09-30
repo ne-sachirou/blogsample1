@@ -17,20 +17,12 @@
   aside { font-size: smaller; }
 }
 
-.pagination {
-  font-size: 1.5em;
-  text-align: center;
+.pagination { text-align: center; }
 
-  a, .current {
-    padding: 0.42em;
-  }
+.new_item, .edit_item {
+  .field {
+    input, textarea, select { width: 80%; }
 
-  a {
-    background: #cc3333;
-    box-shadow: 1px 1px 1px #aaaaaa;
-    color: #c0ffee !important;
-    text-decoration: none;
-
-    &:hover { color: inherit !important; }
+    textarea { height: 24em; }
   }
 }
