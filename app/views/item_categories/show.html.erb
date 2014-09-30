@@ -6,7 +6,7 @@
 </p>
 <ul>
   <% @item_category.items.each do |item| %>
-    <li><%= link_to item.title, item_path(item) %></li>
+    <li><%= link_to item.title, item %></li>
   <% end %>
 </ul>
 

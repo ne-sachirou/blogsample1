@@ -9,16 +9,28 @@
 <body>
 <header id="header">
   <nav>
-  <% if user_signed_in? %>
-    Logged in as <strong><%= current_user.email %></strong>.
-    <%# link_to 'Edit profile', edit_user_registration_path %> |
-    <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-  <% else %>
-    <%= link_to "Login", new_user_session_path %>
-  <% end %>
+    <% if user_signed_in? %>
+      Logged in as <strong><%= current_user.email %></strong>.
+      <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+    <% else %>
+      <%= link_to "Login", new_user_session_path %>
+    <% end %>
   </nav>
   <h1>Blogsample1</h1>
 </header>
-<article id="content"><%= yield %></article>
+<div class="pure-g">
+  <article id="content" class="pure-u-3-4">
+    <%= yield %>
+  </article>
+  <div class="pure-u-1-4">
+    <nav class="pure-menu pure-menu-open">
+      <ul>
+        <% ItemCategory.all.each do |item_category| %>
+          <li><%= link_to item_category.name, item_category %></li>
+        <% end %>
+      </ul>
+    </nav>
+  </div>
+</div>
 </body>
 </html>
