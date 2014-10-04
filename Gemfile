@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby '2.1.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
@@ -20,8 +20,6 @@ gem 'jquery-rails'
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
-# bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '~> 0.4.0',          group: :doc
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -29,30 +27,29 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # Use unicorn as the app server
 # gem 'unicorn'
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
-
-# Use debugger
-# gem 'debugger', group: [:development, :test]
-
 gem 'devise'
+gem 'html_truncator', '~> 0.4'
 gem 'kaminari'
 gem 'nokogiri'
 gem 'pygments.rb' # Syntax hilighter (Using for Markdown). Needs Python2.
 gem 'redcarpet' # Markdown
 
+# gem 'byebug', group: [:development, :test] # Use debugger
+
 group :development do
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
+  # gem 'capistrano-rails' # Use Capistrano for deployment
   gem 'i18n_generators'
+  gem 'spring' # Spring speeds up development by keeping your application running in the background.
 end
 
 group :test do
-  gem 'rspec'
-  gem 'rspec-rails', '~> 3.0.0'
-  gem 'shoulda-matchers'
   gem 'database_cleaner'
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'faker-japanese'
+  gem 'rspec'
+  gem 'rspec-rails', '~> 3.0.0'
+  gem 'shoulda-matchers'
 end
+
+gem 'sdoc', '~> 0.4.0', group: :doc # bundle exec rake doc:rails generates the API under doc/api.

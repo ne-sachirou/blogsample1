@@ -58,6 +58,8 @@ GEM
       i18n (~> 0.5)
     faker-japanese (0.0.1)
     hike (1.2.3)
+    html_truncator (0.4.0)
+      nokogiri (~> 1.5)
     http-cookie (1.0.2)
       domain_name (~> 0.5)
     i18n (0.6.11)
@@ -262,6 +264,7 @@ DEPENDENCIES
   factory_girl_rails
   faker
   faker-japanese
+  html_truncator (~> 0.4)
   i18n_generators
   jbuilder (~> 2.0)
   jquery-rails
